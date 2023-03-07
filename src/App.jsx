@@ -15,12 +15,29 @@ export default function App() {
   // };
 
   return (
-    <div className="App">
-      {/* <Grid /> */}
-      <Link to="/">
+    <div>
+      <div
+        className="d-flex align-items-center gap-2"
+        style={{
+          textAlign: "center",
+          backgroundColor: "pink",
+          minHeight: "100vh",
+        }}
+      ></div>
+      {/* <h1>Upbeat !!!</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "right",
+          textAlign: "right",
+        }}
+      >
+        <Grid />
+      </div> */}
+      {/* <Link to="/">
         <button>Start</button>
-      </Link>
-
+      </Link> */}
       {/* <div>
         <button onClick={navigateHome}>Home</button>
         <hr />

@@ -8,8 +8,8 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 // import { b } from "./HexagonGrid.js";
 // import { hexSize } from "./HexagonGrid.js";
 
-const colConfig = 4;
-const rowConfig = 6;
+const colConfig = 9;
+const rowConfig = 1;
 
 const gridWidth = 190 * rowConfig;
 const gridHeight = 190 * rowConfig;
@@ -18,7 +18,9 @@ const getGridDimensions = (gridWidth, gridHeight) => {
   //   const b = gridHeight / (2 * gridWidth) - 2;
   const columns = Math.ceil(colConfig / 2);
   const rows = rowConfig * 2;
-  const hexSize = Math.floor(gridWidth / (rows * columns));
+  const hexSize = Math.floor(
+    gridWidth / (rows * columns) + gridHeight / (rows * columns) - 30
+  );
   return {
     columns,
     hexSize,
@@ -35,8 +37,8 @@ const HexGridDemo = () => {
     return {
       className: "d-flex gap-5 justify-content-center",
       style: {
-        fill: "pink",
-        stroke: "white",
+        fill: "#ee749b",
+        stroke: "#40ba9e",
       },
       onClick: () => alert(`Hexagon n.${hexagon} has been clicked`),
     };
