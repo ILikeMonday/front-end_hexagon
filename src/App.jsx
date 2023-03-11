@@ -2,51 +2,36 @@ import "./App.css";
 import Grid from "./component/Grid.jsx";
 import React from "react";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
-import Start from "./Start";
+import Construction from "./Construction";
+import Menu from "./Menu";
+import { useState } from "react";
+import Motion from "./Motion";
+import Select from "./Select";
 
 export default function App() {
-  // const navigate = useNavigate();
-  // const navigateToContacts = () => {
-  //   navigate("/Start");
-  // };
-
-  // const navigateHome = () => {
-  //   navigate("/");
-  // };
-
   return (
     <div>
       <div
         className="d-flex align-items-center gap-2"
         style={{
           textAlign: "center",
-          backgroundColor: "pink",
           minHeight: "100vh",
         }}
-      ></div>
+      >
+        <Construction />
+        {/* <Select /> */}
+        {/* <Menu /> */}
+        {/* <Constructor /> */}
+      </div>
       {/* <h1>Upbeat !!!</h1>
       <div
         style={{
-          display: "flex",
-          justifyContent: "center",
+          justifyContent: "right",
           alignItems: "right",
           textAlign: "right",
         }}
       >
-        <Grid />
-      </div> */}
-      {/* <Link to="/">
-        <button>Start</button>
-      </Link> */}
-      {/* <div>
-        <button onClick={navigateHome}>Home</button>
-        <hr />
-        <button onClick={navigateToContacts}>Contacts</button>
-
-        <Routes>
-          <Route path="/contacts" element={<Start />} />
-          <Route path="/" element={<App />} />
-        </Routes>
+        <Motion />
       </div> */}
     </div>
   );
